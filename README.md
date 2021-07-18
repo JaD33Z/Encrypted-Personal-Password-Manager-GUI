@@ -74,15 +74,43 @@ Built with Python3, Tkinter for the user interface, Sqlite3 is the database that
 
 
 # Safety with Encryption Key
-
 </br>
-
-### If you were to view the contents of your database it would look something like this:
-
+## For transparency's sake, keep in mind this app is just a personal project for personal use for one user on a local machine. I would not recommend giving it a whirl in any corporate or shared setting with highly sensitive client/employee information. 
 </br>
+That being said, to give a deeper look into how the key : encryption relationship works, and why you must keep your key private - here is an example:
+</br>
+The master password is stored encrypted, so if pw.txt was accessed your password would be unreadable and
+If you were to directly view the contents of your database file it would look something like this:
 
 # encrypted db view
 <img width="1255" alt="dbencrptd" src="https://user-images.githubusercontent.com/74392848/126056668-d5a74a0e-11f7-4bcf-abba-c748510c898c.png">
+
+Not overly useful to someone trying to get your info... But, if they were to get your Key, now they can decrypt your password and your data and get all of your info in plain text. See code below:
+
+```python
+
+key_str = 'bWyo52t1dSnwi-KpvLM2OhUsn-i1jeV-MLuPj9Ud2cw='
+key = str.encode(key_str)
+
+password_str = 'gAAAAABg77PHASqKZlKkQOuNersMJEBl3JVpBhJebbI0emQK_lbU9HOfQnPi2vIAcVmczyapwsJk_HrlDd514_2Xz6qMmHKiPQ=='
+password = str.encode(password_str)
+
+f = Fernet(key)
+
+plain_text = f.decrypt(password)
+print(plain_text)
+
+# output:
+#          b'123'
+
+```
+
+
+</br>
+
+
+
+
 
 </br>
 
@@ -94,9 +122,7 @@ Built with Python3, Tkinter for the user interface, Sqlite3 is the database that
 
 <img width="631" alt="Screen Shot 2021-07-18 at 12 58 37 AM" src="https://user-images.githubusercontent.com/74392848/126056333-257ce15b-3f04-436e-b359-ae2667a17dc0.png">
 
-</br>
 
-## code to show and explain
 
 
 

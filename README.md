@@ -28,7 +28,8 @@ Built with Python3 and Tkinter for the user interface. Sqlite3 is the database t
 * #### If it is your first time running this app, just enter what you wish to be your master password from now on and keep it somewhere safe.
 * #### This password is required to use your encryption key that will be generated and stored for you.
 
-# [Read Encryption Key Safety Information @ Bottom Of Page](#https://github.com/JaD33Z/Encrypted-Personal-Password-Manager-GUI/edit/master/README.md?plain=1#L81
+# Read Encryption Key Safety Information @ Bottom Of Page!
+# [#Safety with Encryption Key](#https://github.com/JaD33Z/Encrypted-Personal-Password-Manager-GUI/edit/master/README.md?#L81
 )
 
 

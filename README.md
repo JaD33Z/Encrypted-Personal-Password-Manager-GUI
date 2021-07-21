@@ -36,7 +36,7 @@ Built with Python3 and Tkinter library for the user interface. Sqlite3 is the da
 
 </br>
 
-# *Read Encryption Key Safety Information @ Bottom Of Page!*
+# [*Read Encryption Key Safety Information @ Bottom Of Page!*](#important---safety-with-encryption-key)
 
 
 
